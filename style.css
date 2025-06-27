@@ -89,14 +89,12 @@ body {
   background: var(--btn-active);
 }
 
-/* Clear button */
 .operator .btn:first-child {
   grid-column: span 2;
   background: #b22222;
   color: white;
 }
 
-/* Equal button */
 .operator .btn:last-child {
   grid-column: span 2;
   background: var(--accent);
