@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  /* Gray Theme colors */
+  --bg: #dcdcdc;
+  --panel: #f0f0f0;
+  --btn: #a9a9a9;
+  --btn-hover: #c0c0c0;
+  --btn-active: #909090;
+  --text: #1c1c1c;
+  --accent: #606060;
+  --input-bg: #e6e6e6;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--bg), var(--panel));
+}
+
+.container {
+  background: var(--panel);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.calculator {
+  text-align: center;
+  color: var(--text);
+  margin-top: 0;
+  letter-spacing: 0.2rem;
+}
+
+#input,
+#output {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: right;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 0.4rem 0;
+  background: var(--input-bg);
+  color: var(--text);
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#output {
+  min-height: 2.5rem;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.operator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--btn);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+}
+
+.btn:active {
+  transform: scale(0.95);
+  background: var(--btn-active);
+}
+
+/* Clear button */
+.operator .btn:first-child {
+  grid-column: span 2;
+  background: #b22222;
+  color: white;
+}
+
+/* Equal button */
+.operator .btn:last-child {
+  grid-column: span 2;
+  background: var(--accent);
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .btn {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}

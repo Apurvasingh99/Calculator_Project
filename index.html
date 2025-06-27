@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="calculator">CALCULATOR</h1>  
+        <input type="text" id="input" readonly>
+        <div class="operator">
+            <button class="btn" id="ac" onclick="clearDisplay()" >AC</button>
+            <button class="btn" id="pow" onclick="valueInDisplay('^')" onkeypress="valueInDisplay('^')">^</button>
+            <button class="btn" id="per" onclick="valueInDisplay('%')" onkeypress="valueInDisplay('%')">%</button>
+            <button class="btn" id="divide" onclick="valueInDisplay('/')" onkeypress="valueInDisplay('/')">/</button>
+            <button class="btn" id="seven" onclick="valueInDisplay('7')" onkeypress="valueInDisplay('7')">7</button>
+            <button class="btn" id="eight" onclick="valueInDisplay('8')" onkeypress="valueInDisplay('8')">8</button>
+            <button class="btn" id="nine" onclick="valueInDisplay('9')" onkeypress="valueInDisplay('9')">9</button>
+            <button class="btn" id="mult" onclick="valueInDisplay('*')" onkeypress="valueInDisplay('*')">*</button>
+            <button class="btn" id="four" onclick="valueInDisplay('4')" onkeypress="valueInDisplay('4')">4</button>
+            <button class="btn" id="five" onclick="valueInDisplay('5')" onkeypress="valueInDisplay('5')">5</button>
+            <button class="btn" id="six" onclick="valueInDisplay('6')" onkeypress="valueInDisplay('6')">6</button>
+            <button class="btn" id="sub" onclick="valueInDisplay('-')" onkeypress="valueInDisplay('-')">-</button>
+            <button class="btn" id="one" onclick="valueInDisplay('1')" onkeypress="valueInDisplay('1')">1</button>
+            <button class="btn" id="two" onclick="valueInDisplay('2')" onkeypress="valueInDisplay('2')">2</button>
+            <button class="btn" id="three" onclick="valueInDisplay('3')" onkeypress="valueInDisplay('3')">3</button>
+            <button class="btn" id="add" onclick="valueInDisplay('+')" onkeypress="valueInDisplay('+')">+</button>
+            <button class="btn" id="zero" onclick="valueInDisplay('0')" onkeypress="valueInDisplay('0')">0</button>
+            <button class="btn" id="zero" onclick="valueInDisplay('.')" onkeypress="valueInDisplay('.')">.</button>
+            <button class="btn" id="equal" onclick="calculate()" onkeypress="calculate()">=</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
